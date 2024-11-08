@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Slider - 3 Slides per View</title>
+    <style>
+        /* Slider container styling */
+        .slider-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Slider styling */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+            white-space: nowrap;
+        }
+
+        /* Each slide styling */
+        .slide {
+            border-radius: 15px;
+            flex: 0 0 33.33%;
+            /* 3 slides per view */
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+        }
+
+        /* Video styling */
+        video {
+            border-radius: 15px;
+            width: 90%;
+            /* Adjust as needed */
+            height: auto;
+            pointer-events: none;
+            /* Prevent video controls */
+        }
+
+        /* Navigation buttons */
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .paragraph {
+            list-style-position: inside;
+            color: #fff !important;
+            font-weight: 500;
+            font-family: monospace;
+        }
+
+        .para {
+            padding-right: 0px;
+            color: #fff !important;
+            text-align: start;
+            list-style-position: inside;
+            font-weight: 500;
+            font-family: monospace;
+            font-size: 17px;
+        }
+.img1{
+    width: 110px;
+  
+}
+.cc {
+    opacity: 1;
+    transition: opacity 0.3s ease; /* Smooth fade-out effect */
+}
+
+.slide:hover .cc {
+    opacity: 0; /* Hide .cc on hover */
+}
+
+
+
+        .cc {
+            position: absolute;
+            inset-block-end: -2px;
+            display: flex;
+            flex-direction: column;
+            /* grid-gap: 20px; */
+            /* gap: 20px; */
+            align-items: flex-start;
+            inline-size: 24%;
+            padding: 32px;
+            border-radius: 0 0 14px 14px;
+            border-block-start: 1px solid rgba(0, 0, 0, .3);
+            /* -webkit-backdrop-filter: blur(10px); */
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <video
+                    src="https://videos.ctfassets.net/w8fc6tgspyjz/1N1FAcfE18K4Rdt7HRnj2E/cc29ca3d0c098fe43308b42957694507/CONVENE.mp4"
+                     loop muted></video>
+                <div class="cc">
+                    <div><img  class="img1" src="https://images.ctfassets.net/w8fc6tgspyjz/5zs0C8lUIHD0RCVUQn9UlT/74c39e4f52cd6750cb39ffe4817d601b/convene.png" alt=""></div>
+                    <p class="para">"ClickUp is serving us so we <br> can serve our pet guardians."</p>
+                    <p class="paragraph">Samantha Dengate<br>Sr. Project Manager</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <video
+                    src="https://videos.ctfassets.net/w8fc6tgspyjz/4wAP1GZqkCAlSf6FLNzIRh/6434ba8ed8f2941683e537a3ac6d8f72/DIGGS.mp4"
+                    loop muted></video>
+                    <div class="cc">
+                        <div ><img class="img1" src="https://images.ctfassets.net/w8fc6tgspyjz/5zs0C8lUIHD0RCVUQn9UlT/74c39e4f52cd6750cb39ffe4817d601b/convene.png" alt=""></div>
+                        <p class="para">"ClickUp is serving us so we <br> can serve our pet guardians."</p>
+                        <p class="paragraph">Samantha Dengate<br>Sr. Project Manager</p>
+                    </div>
+            </div>
+            <!-- Additional slides up to 8 -->
+            <div class="slide">
+                <video
+                    src="https://videos.ctfassets.net/w8fc6tgspyjz/yYtQckXYGJOA2tcvsXWof/622551251f7fb9d625c88a1044424a94/FINASTRA.mp4"
+                    loop muted></video>
+                    <div class="cc">
+                        <div ><img class="img1" src="https://images.ctfassets.net/w8fc6tgspyjz/5zs0C8lUIHD0RCVUQn9UlT/74c39e4f52cd6750cb39ffe4817d601b/convene.png" alt=""></div>
+                        <p class="para">"ClickUp is serving us so we <br> can serve our pet guardians."</p>
+                        <p class="paragraph">Samantha Dengate<br>Sr. Project Manager</p>
+                    </div>
+            </div>
+            <div class="slide">
+                <video
+                    src="https://videos.ctfassets.net/w8fc6tgspyjz/3yodEwQuuEnCPrazV6jP3F/e515593afbca79532c0708e046eba95d/HAWKE.mp4"
+                    loop muted></video>
+                    <div class="cc">
+                        <div><img  class="img1" src="https://images.ctfassets.net/w8fc6tgspyjz/5zs0C8lUIHD0RCVUQn9UlT/74c39e4f52cd6750cb39ffe4817d601b/convene.png" alt=""></div>
+                        <p class="para">"ClickUp is serving us so we <br> can serve our pet guardians."</p>
+                        <p class="paragraph">Samantha Dengate<br>Sr. Project Manager</p>
+                    </div>
+            </div>
+            <div class="slide">
+                <video
+                    src="https://videos.ctfassets.net/w8fc6tgspyjz/1TxkHRt6PS2LZ1INOEU220/1d3a512602b70de70baafdc49be2018e/YOGA.mp4"
+                    loop muted></video>
+                    <div class="cc">
+                        <div ><img class="img1" src="https://images.ctfassets.net/w8fc6tgspyjz/5zs0C8lUIHD0RCVUQn9UlT/74c39e4f52cd6750cb39ffe4817d601b/convene.png" alt=""></div>
+                        <p class="para">"ClickUp is serving us so we <br> can serve our pet guardians."</p>
+                        <p class="paragraph">Samantha Dengate<br>Sr. Project Manager</p>
+                    </div>
+            </div>
+            <div class="slide">
+                <video
+                    src="https://videos.ctfassets.net/w8fc6tgspyjz/5903x65i4xxT8rCgFqg6wX/f9742b6019ed145525b83b008697181a/PADRES.mp4"
+                    loop muted></video>
+                    <div class="cc">
+                        <div ><img class="img1" src="https://images.ctfassets.net/w8fc6tgspyjz/5zs0C8lUIHD0RCVUQn9UlT/74c39e4f52cd6750cb39ffe4817d601b/convene.png" alt=""></div>
+                        <p class="para">"ClickUp is serving us so we <br> can serve our pet guardians."</p>
+                        <p class="paragraph">Samantha Dengate<br>Sr. Project Manager</p>
+                    </div>
+            </div>
+            <div class="slide">
+                <video
+                    src="https://videos.ctfassets.net/w8fc6tgspyjz/6D8cIhy7D6XmTt3yLHknkl/a1d6a05fa8cafc3a69cb72b985dd74d1/NAVIGATE.mp4"
+                    loop muted></video>
+                    <div class="cc">
+                        <div ><img class="img1" src="https://images.ctfassets.net/w8fc6tgspyjz/5zs0C8lUIHD0RCVUQn9UlT/74c39e4f52cd6750cb39ffe4817d601b/convene.png" alt=""></div>
+                        <p class="para">"ClickUp is serving us so we <br> can serve our pet guardians."</p>
+                        <p class="paragraph">Samantha Dengate<br>Sr. Project Manager</p>
+                    </div>
+            </div>
+            <div class="slide">
+                <video
+                    src="https://videos.ctfassets.net/w8fc6tgspyjz/33GxRI3XzzJiV8otunzckc/a2725d0f1dfa53572b554a39d0c3ca2f/VELA.mp4"
+                    loop muted></video>
+                    <div class="cc">
+                        <div ><img class="img1" src="https://images.ctfassets.net/w8fc6tgspyjz/5zs0C8lUIHD0RCVUQn9UlT/74c39e4f52cd6750cb39ffe4817d601b/convene.png" alt=""></div>
+                        <p class="para">"ClickUp is serving us so we <br> can serve our pet guardians."</p>
+                        <p class="paragraph">Samantha Dengate<br>Sr. Project Manager</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <button class="prev" onclick="moveSlide(-1)">❮ Prev</button>
+    <button class="next" onclick="moveSlide(1)">Next ❯</button>
+
+    <script>
+        let currentIndex = 0;
+        const slidesPerView = 3;
+        const slider = document.getElementById('slider');
+        const slides = slider.getElementsByClassName('slide');
+        const totalSlides = slides.length;
+
+        // Function to move between slides
+        function moveSlide(direction) {
+            currentIndex += direction;
+
+            // Wrap-around logic for looping effect
+            if (currentIndex < 0) {
+                currentIndex = totalSlides - slidesPerView;
+            } else if (currentIndex >= totalSlides - slidesPerView + 1) {
+                currentIndex = 0;
+            }
+
+            const offset = currentIndex * (100 / slidesPerView); // Calculate the offset for each slide
+            slider.style.transform = `translateX(-${offset}%)`;
+        }
+
+        // Event listeners for hover play
+        Array.from(slides).forEach(slide => {
+            const video = slide.querySelector('video');
+
+            // Start video on hover
+            slide.addEventListener('mouseenter', () => {
+                video.play();
+            });
+
+            // Pause video when not hovered
+            slide.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0; // Reset video to start
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
